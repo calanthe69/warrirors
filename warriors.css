@@ -6,7 +6,14 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+@media screen and (max-width: 768px) {
+    /* Make the main header fit better on smaller screens */
+    .main-header {
+        width: 100%;
+        margin-left: 0; /* Remove the left margin */
+        font-size: 20px; /* Adjust font size */
+        padding: 10px;
+    }
 :root {
     --body-color: #E4E9F7;
     --sidebar-color: #cf1010;
