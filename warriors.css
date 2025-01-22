@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --body-color: #E4E9F7;
+    --sidebar-color: #cf1010;
+    --primary-color: #eb9de9;
+    --primary-color-light: #fdfdfd;
+    --text-color: #707070;
+
+    --tran-04: all 0.4s ease;
+}
+
+body {
+    height: 100vh;
+    background: var(--body-color);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: hidden;
+}
+.main-header {
+    width: calc(100% - 300px);
+    text-align: center;
+    color: #000000;
+    font-size: 24px;
+    font-weight:bold;
+    margin-left: 200px; 
+    padding: 20px 0;
+    position: fixed;
+    top: 15%;
+    z-index: 1050; 
+    background: none; 
+
+}
+.under {
+    font-size: 18px; /* Smaller than the title */
+    color: black;
+    background: rgba(214, 6, 6, 0.263); /* Slight red background */
+    padding: 5px; /* Optional for spacing */
+    border-radius: 4px; /* Optional for rounded corners */
+    display: inline-block; /* To fit neatly around the text */
+    margin-top: 10px; /* Space from the title */
+}
+
+
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+.title:hover {
+    animation: heartbeat 1s ease-in-out infinite; 
+}
+
+.centered-butterfly {
+    position: absolute;
+    top: -50px;
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 90px; 
+    height: auto; 
+    animation: glow 1s infinite ease-in-out; 
+}
+
+
+@keyframes glow {
+    0%, 100% {
+        filter: drop-shadow(0 0 0 rgba(50, 12, 147, 0.593));
+    }
+    50% {
+        filter: drop-shadow(0 0 20px rgb(97, 171, 227));
+    }
+}
+
+body {
+    padding-top: 80px; 
+}
+
+
+
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px; 
+    width: 300px;
+    height: 100%;
+    background: rgb(247, 196, 204);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    padding: 20px 0;
+    transition: var(--tran-04);
+    z-index: 1000;
+}
+
+input#toggle:checked ~ .sidebar {
+    left: 0; 
+}
+
+.sidebar .image-text {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sidebar .image img {
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+}
+
+.sidebar .header-text .name {
+    font-weight: 600;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 10px 0;
+}
+
+.sidebar li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--sidebar-color);
+    padding: 10px;
+    border-radius: 6px;
+    transition: var(--tran-04);
+}
+
+.sidebar li a:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+
+.btn-toggle-nav {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    cursor: pointer;
+    color: var(--sidebar-color);
+    z-index: 1100;
+    font-size: 22px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--tran-04);
+}
+
+
+input#toggle {
+    display: none;
+}
+
+
+
+body {
+    height: 100vh;
+    background: url('abst.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: hidden;
+    transition: filter 0.4s ease; 
+}
+@keyframes vibrate {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+}
+
+.btn-toggle-nav {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    cursor: pointer;
+    color: var(--sidebar-color);
+    z-index: 1100;
+    font-size: 22px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--tran-04);
+    animation: vibrate 0.5s ease infinite;
+}
+
+
+.btn-toggle-nav:hover {
+    animation-play-state: paused;
+}
+
+
+input#toggle:checked ~ .btn-toggle-nav {
+    animation-play-state: paused;
+}
+
+input#toggle:checked ~ .sidebar ~ body {
+    filter: brightness(0.7); 
+}
+
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px; 
+    width: 300px;
+    height: 100%;
+    background: rgb(247, 196, 204);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    padding: 20px 0;
+    transition: var(--tran-04);
+    z-index: 1000;
+}
+
+input#toggle:checked ~ .sidebar {
+    left: 0; 
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -40%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes floatIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.signin-container {
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 900;
+    margin-top: 20px;
+    animation: fadeIn 1.2s ease-out 0.5s both; 
+
+.signin-box h2 {
+    color: var(--sidebar-color);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    animation: floatIn 1s ease-out 1.7s both; 
+}
+
+.signin-form .input-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+    animation: floatIn 1s ease-out;
+    animation-fill-mode: both;
+    opacity: 0; 
+}
+
+.signin-form .input-group:nth-child(1) {
+    animation-delay: 2s; 
+
+.signin-form .input-group:nth-child(2) {
+    animation-delay: 2.3s; 
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    animation: floatIn 1s ease-out 2.6s both; 
+}
+
+.signin-form button {
+    width: 100%;
+    padding: 12px;
+    background: var(--sidebar-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: floatIn 1s ease-out 2.9s both; 
+    position: relative;
+    overflow: hidden;
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 1rem;
+    animation: floatIn 1s ease-out 3.2s both; 
+}

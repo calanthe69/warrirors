@@ -1,0 +1,130 @@
+body {
+    background-color: #fdf6f9; 
+    font-family: 'Arial', sans-serif;
+    color: #4c4c4c; 
+    margin: 0;
+    padding: 0;
+}
+
+.top-nav {
+    display: flex;
+    align-items: center;
+    background-color: #ffadc6; 
+    padding: 10px 20px;
+}
+
+.home-link {
+    text-decoration: none;
+    color: #ffffff; 
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+.home-logo {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.site-title {
+    font-size: 1.8rem;
+    color: #4c4c4c; 
+    margin: 0 auto;
+}
+
+.header-section {
+    background-color: #ffd3e0; 
+    padding: 50px 20px;
+    text-align: center;
+    color: #ffffff; 
+}
+
+.header-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ff5c8d;
+}
+
+.header-section p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #6a7b89; 
+}
+
+
+.wellness-info {
+    background-color: #f0f8ff;
+    border-left: 5px solid #ff6f91; 
+    padding: 30px;
+    margin: 40px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.wellness-info p {
+    font-size: 1.3rem;
+    color: #1f1f1f; 
+    line-height: 1.6;
+    font-weight: 500;
+    margin: 0;
+}
+
+.wellness-info p::first-letter {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #4818b8; 
+}
+
+.wellness-info p:hover {
+    color: #8a3649;
+    transition: color 0.3s ease;
+}
+
+
+
+.founder-card {
+    background-color: #ffffff; 
+    border: 2px solid #ff6f91; 
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.founder-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.founder-img {
+    border-radius: 50%;
+    max-width: 150px;
+    margin-bottom: 20px;
+    border: 3px solid #6a7b89; 
+}
+
+
+.footer-section {
+    background-color: #ffadc6; 
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-section a {
+    color: #ff5c8d; 
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+
+      
